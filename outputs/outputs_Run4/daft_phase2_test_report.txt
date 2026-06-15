@@ -1,0 +1,33 @@
+===== DAFT PHASE-2 TEST RESULTS =====
+Device: cpu
+
+Test Loss:      0.1076
+Test Accuracy:  0.6486
+Test Precision: 0.3568
+Test Recall:    0.5116
+Test F1:        0.4204
+Test AUC:       0.6657
+Threshold:      0.53
+
+Classification Report:
+              precision    recall  f1-score   support
+
+          no       0.81      0.69      0.75       389
+         yes       0.36      0.51      0.42       129
+
+    accuracy                           0.65       518
+   macro avg       0.58      0.60      0.58       518
+weighted avg       0.70      0.65      0.67       518
+
+Confusion Matrix:
+[[270 119]
+ [ 63  66]]
+
+Method:
+DAFT Phase-2 DenseNet121
+Changes:
+- Smaller DAFT MLP
+- Stronger dropout
+- Focal loss with label smoothing
+- Partial weighted oversampling
+- Threshold tuning

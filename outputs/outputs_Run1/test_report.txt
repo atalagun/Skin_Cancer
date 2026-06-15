@@ -1,0 +1,21 @@
+===== TEST RESULTS =====
+Test Loss:      0.6467
+Test Accuracy:  0.6429
+Test Precision: 0.3228
+Test Recall:    0.3953
+Test F1:        0.3554
+Test AUC:       0.6203
+
+Classification Report:
+              precision    recall  f1-score   support
+
+          no       0.78      0.72      0.75       389
+         yes       0.32      0.40      0.36       129
+
+    accuracy                           0.64       518
+   macro avg       0.55      0.56      0.55       518
+weighted avg       0.67      0.64      0.65       518
+
+Confusion Matrix:
+[[282 107]
+ [ 78  51]]

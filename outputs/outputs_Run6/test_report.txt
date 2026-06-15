@@ -1,0 +1,26 @@
+===== TEST RESULTS =====
+Device: cpu
+Test Loss:      0.1102
+Test Accuracy:  0.7104
+Test Precision: 0.4340
+Test Recall:    0.5349
+Test F1:        0.4792
+Test AUC:       0.6857
+Threshold:      0.57
+
+Classification Report:
+              precision    recall  f1-score   support
+
+          no       0.83      0.77      0.80       389
+         yes       0.43      0.53      0.48       129
+
+    accuracy                           0.71       518
+   macro avg       0.63      0.65      0.64       518
+weighted avg       0.73      0.71      0.72       518
+
+Confusion Matrix:
+[[299  90]
+ [ 60  69]]
+
+Method:
+EfficientNet-B3 + DAFT + 4-channel RGB+Canny input + CLAHE + auto lesion crop

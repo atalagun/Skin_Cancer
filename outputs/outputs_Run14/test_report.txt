@@ -1,0 +1,74 @@
+===== ENSEMBLE TEST RESULTS =====
+
+Models:
+  A = Run 2  checkpoint : C:/Users/Ata/PycharmProjects/SkinCancerData/outputs_effb3_daft_cutmix/best_model.pth
+  B = Run 4v2 checkpoint: C:/Users/Ata/PycharmProjects/SkinCancerData/outputs_effb3_daft_mixup_v2/best_model.pth
+  Weights: A=0.5, B=0.5
+  TTA views: 8
+
+--- Model A — Run 2 (TTA) ---
+AUC:       0.7222
+F1:        0.5099
+Precision: 0.4018
+Recall:    0.6977
+Threshold: 0.660
+Confusion Matrix:
+[[255 134]
+ [ 39  90]]
+  TN=255  FP=134
+  FN=39  TP=90
+
+              precision    recall  f1-score   support
+
+ no melanoma       0.87      0.66      0.75       389
+    melanoma       0.40      0.70      0.51       129
+
+    accuracy                           0.67       518
+   macro avg       0.63      0.68      0.63       518
+weighted avg       0.75      0.67      0.69       518
+
+--- Model B — Run 4 v2 (TTA) ---
+AUC:       0.7144
+F1:        0.4585
+Precision: 0.4012
+Recall:    0.5349
+Threshold: 0.705
+Confusion Matrix:
+[[286 103]
+ [ 60  69]]
+  TN=286  FP=103
+  FN=60  TP=69
+
+              precision    recall  f1-score   support
+
+ no melanoma       0.83      0.74      0.78       389
+    melanoma       0.40      0.53      0.46       129
+
+    accuracy                           0.69       518
+   macro avg       0.61      0.64      0.62       518
+weighted avg       0.72      0.69      0.70       518
+
+--- Ensemble A+B (TTA) ---
+AUC:       0.7219
+F1:        0.4860
+Precision: 0.4062
+Recall:    0.6047
+Threshold: 0.690
+Confusion Matrix:
+[[275 114]
+ [ 51  78]]
+  TN=275  FP=114
+  FN=51  TP=78
+
+              precision    recall  f1-score   support
+
+ no melanoma       0.84      0.71      0.77       389
+    melanoma       0.41      0.60      0.49       129
+
+    accuracy                           0.68       518
+   macro avg       0.62      0.66      0.63       518
+weighted avg       0.73      0.68      0.70       518
+
+--- Delta (ensemble vs best single) ---
+AUC:    -0.0003
+TP caught: 78 vs 90 (-12)

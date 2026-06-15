@@ -1,0 +1,23 @@
+===== TEST RESULTS =====
+Test Loss:      0.8570
+Test Accuracy:  0.5502
+Test AUC:       0.7212
+Test F1:        0.5158
+Test Precision: 0.4091
+Test Recall:    0.6977
+Threshold:      0.72
+
+              precision    recall  f1-score   support
+
+ no melanoma       0.87      0.67      0.75       389
+    melanoma       0.41      0.70      0.52       129
+
+    accuracy                           0.67       518
+   macro avg       0.64      0.68      0.63       518
+weighted avg       0.75      0.67      0.69       518
+
+Confusion Matrix:
+[[259 130]
+ [ 39  90]]
+  TN=259  FP=130
+  FN=39  TP=90

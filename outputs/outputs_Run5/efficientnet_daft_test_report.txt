@@ -1,0 +1,31 @@
+===== EFFICIENTNET-B3 DAFT TEST RESULTS =====
+Device: cpu
+
+Test Loss:      0.1203
+Test Accuracy:  0.6737
+Test Precision: 0.3765
+Test Recall:    0.4729
+Test F1:        0.4192
+Test AUC:       0.6436
+Threshold:      0.59
+
+Classification Report:
+              precision    recall  f1-score   support
+
+          no       0.81      0.74      0.77       389
+         yes       0.38      0.47      0.42       129
+
+    accuracy                           0.67       518
+   macro avg       0.59      0.61      0.60       518
+weighted avg       0.70      0.67      0.69       518
+
+Confusion Matrix:
+[[288 101]
+ [ 68  61]]
+
+Method:
+DAFT + EfficientNet-B3
+Image size: 300x300
+Focal loss with label smoothing
+Partial weighted oversampling
+Threshold tuning

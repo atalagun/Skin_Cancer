@@ -1,0 +1,38 @@
+===== TEST RESULTS =====
+
+--- Standard (single pass) ---
+Test Loss:      0.8626
+Test Accuracy:  0.4710
+Test AUC:       0.6788
+Test F1:        0.4280
+Test Precision: 0.4085
+Test Recall:    0.4496
+Threshold:      0.77
+Confusion Matrix:
+[[305  84]
+ [ 71  58]]
+  TN=305  FP=84
+  FN=71  TP=58
+
+--- TTA (8 views, averaged) ---
+TTA AUC:        0.6935  (delta +0.0146)
+TTA F1:         0.4186
+TTA Precision:  0.4186  (delta +0.0102)
+TTA Recall:     0.4186  (delta -0.0310)
+Threshold:      0.79
+Confusion Matrix:
+[[314  75]
+ [ 75  54]]
+  TN=314  FP=75
+  FN=75  TP=54
+
+--- Classification report (TTA) ---
+              precision    recall  f1-score   support
+
+ no melanoma       0.81      0.81      0.81       389
+    melanoma       0.42      0.42      0.42       129
+
+    accuracy                           0.71       518
+   macro avg       0.61      0.61      0.61       518
+weighted avg       0.71      0.71      0.71       518
+
