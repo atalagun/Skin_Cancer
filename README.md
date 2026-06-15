@@ -552,7 +552,7 @@ melanoma-midas/
 ├── Run9_Train_efficientnet_daft_cutmix_with_TTA.py ← TTA evaluation variant of Run8
 ├── Run10_train_efficient_daft_cutmix_plat.py     ← Heavy regularisation experiment
 ├── Run11_train_efficient_daft_cutmix_mixup.py    ← MixUp added
-├── Run12_train_efficient_daft_mixup_v2.py        ← ★ BEST — fine threshold search (step 0.005)
+├── Run12_train_efficient_daft_mixup_v2.py        ← BEST — fine threshold search (step 0.005)
 ├── Run13_train_efficient_daft_cutmix_mixup_v3.py ← 50-epoch no early stop experiment
 ├── Run14_ensemble_run2_4v2.py                    ← Ensemble of Run8 and Run12
 ├── test.py
@@ -575,18 +575,7 @@ melanoma-midas/
 │   └── outputs_Run14
 │
 ├── README.md
-├── requirements.txt
-└── .gitignore
-```
-
-Each run saves outputs to a separate folder:
-```
-outputs_<run_name>/
-├── best_model.pth
-├── training_history.csv
-├── test_report.txt
-├── threshold_curve_standard.png
-└── threshold_curve_tta.png
+└── requirements.txt
 ```
 
 ---
@@ -621,6 +610,6 @@ Approximately 20 minutes on RTX 4060 Laptop GPU. The best checkpoint is saved au
 python Run14_ensemble_run2_4v2.py
 ```
 
-Requires both Run8 and Run12 checkpoints to exist.
+
 
 ---
