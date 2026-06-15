@@ -451,6 +451,8 @@ Fine search (step 0.005) over TTA probabilities on the test set. Maximises recal
 
 ### Threshold Curves
 
+![Standard threshold curve](images/threshold_curve_standard.png)
+
 ![TTA threshold curve](images/threshold_curve_tta.png)
 
 ### Optimiser
@@ -506,11 +508,7 @@ actual: melanoma      FN = 32            TP = 97
 
 32 melanomas missed · 144 unnecessary follow-ups out of 518 patients.
 
-**Threshold curve plots:**
->
-![Standard threshold curve](images/threshold_curve_standard.png)
 
-![TTA threshold curve](images/threshold_curve_tta.png)
 
 
 ### Improvement Over Baseline
