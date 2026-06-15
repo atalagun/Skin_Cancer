@@ -475,7 +475,7 @@ AdamW · weight decay 1e-4 · cosine annealing LR · gradient norm clipping 1.0
 | Run9 | `Run9_Train_efficientnet_daft_cutmix_with_TTA.py` | TTA evaluation variant of Run8 | 0.732 | 0.744 | 96 |
 | Run10 | `Run10_train_efficient_daft_cutmix_plat.py` | Heavy regularisation, over-corrected | 0.694 | 0.419 | 54 |
 | Run11 | `Run11_train_efficient_daft_cutmix_mixup.py` | MixUp added, coarse threshold | 0.736 | 0.519 | 65 |
-| **Run12 ★** | `Run12_train_efficient_daft_mixup_v2.py` | Fine threshold search (step 0.005) | **0.736** | **0.752** | **97** |
+| **Run12** | `Run12_train_efficient_daft_mixup_v2.py` | Fine threshold search (step 0.005) | **0.736** | **0.752** | **97** |
 | Run13 | `Run13_train_efficient_daft_cutmix_mixup_v3.py` | 50 epochs, no early stop | 0.724 | 0.698 | 90 |
 | Run14 | `Run14_ensemble_run2_4v2.py` | Ensemble of Run8 and Run12 | 0.722 | 0.605 | 78 |
 
