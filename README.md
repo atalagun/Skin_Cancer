@@ -449,13 +449,9 @@ Weighted cross-entropy with label smoothing 0.05. Class weights computed as inve
 
 Fine search (step 0.005) over TTA probabilities on the test set. Maximises recall subject to precision ≥ 0.40. The 0.40 floor reflects the clinical priority: missing a melanoma is more dangerous than a false alarm.
 
-### Training Curves
-
-![Training curves](images/training_history_Run12.png)
-
 ### Threshold Curves
 
-![TTA threshold curve](images/threshold_curve_tta_Run12.png)
+![TTA threshold curve](images/threshold_curve_tta.png)
 
 ### Optimiser
 
@@ -481,7 +477,8 @@ AdamW · weight decay 1e-4 · cosine annealing LR · gradient norm clipping 1.0
 | Run13 | `Run13_train_efficient_daft_cutmix_mixup_v3.py` | 50 epochs, no early stop | 0.724 | 0.698 | 90 |
 | Run14 | `Run14_ensemble_run2_4v2.py` | Ensemble of Run8 and Run12 | 0.722 | 0.605 | 78 |
 
-> **AUC progression chart:**
+**AUC progression chart:**
+ 
 ![AUC progression](images/AUC_Recall_Total.png)
 
 ---
@@ -511,9 +508,9 @@ actual: melanoma      FN = 32            TP = 97
 
 **Threshold curve plots:**
 >
-![Standard threshold curve](images/threshold_curve_standard_Run12.png)
+![Standard threshold curve](images/threshold_curve_standard.png)
 
-![TTA threshold curve](images/threshold_curve_tta_Run12.png)
+![TTA threshold curve](images/threshold_curve_tta.png)
 
 
 ### Improvement Over Baseline
