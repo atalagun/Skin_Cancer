@@ -451,15 +451,11 @@ Fine search (step 0.005) over TTA probabilities on the test set. Maximises recal
 
 ### Training Curves
 
-> **Place your training history plots here.**  
-> Upload `training_history_Run12.png` to an `assets/` folder in the repo, then replace this line with:
-> `![Training curves](assets/training_history_Run12.png)`
+![Training curves](images/training_history_Run12.png)
 
 ### Threshold Curves
 
-> **Place your threshold curves here.**  
-> Upload `threshold_curve_tta_Run12.png` to `assets/`, then:
-> `![TTA threshold curve](assets/threshold_curve_tta_Run12.png)`
+![TTA threshold curve](images/threshold_curve_tta_Run12.png)
 
 ### Optimiser
 
