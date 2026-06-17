@@ -555,7 +555,7 @@ melanoma-midas/
 ├── Run12_train_efficient_daft_mixup_v2.py        ← BEST — fine threshold search (step 0.005)
 ├── Run13_train_efficient_daft_cutmix_mixup_v3.py ← 50-epoch no early stop experiment
 ├── Run14_ensemble_run2_4v2.py                    ← Ensemble of Run8 and Run12
-├── test.py
+├── test_model.py
 ├── image_processing.py
 │
 ├── outputs/                                       ← Training curves, threshold plots
@@ -590,26 +590,41 @@ Python 3.11+ · CUDA-capable GPU (8 GB VRAM minimum, tested on NVIDIA RTX 4060 L
 pip install -r requirements.txt
 ```
 
-### Step 1 — Generate data splits (run once)
+### MIDAS DATASET Download
 
-```bash
-python Run4_train_midas_daft_phase2.py
-```
+**1. Open the dataset page:**
 
-### Step 2 — Train the best model
+https://aimi.stanford.edu/datasets/mra-midas-Multimodal-Image-Dataset-for-AI-based-Skin-Cancer?utm_source=chatgpt.com
 
+**2. Click "Download here"**
+
+**3. Sign in / Create an account**
+
+**4. Apply for Access**
+
+**5. Download Files as .zip**
+
+**6. Extract the Files to "atalagun/Skin_Cancer" Directory**
+
+### Train the best model (optional .pth files already exist)
+
+Edit the lines 28-32 in Run12_train_efficient_daft_mixup_v2.py script your paths.
+
+Then run:
 ```bash
 python Run12_train_efficient_daft_mixup_v2.py
 ```
 
 Approximately 20 minutes on RTX 4060 Laptop GPU. The best checkpoint is saved automatically when validation AUC improves.
 
-### Step 3 — Ensemble evaluation
+### Test the Models (Runs8-12)
 
+After the installation of the dataset run:
 ```bash
-python Run14_ensemble_run2_4v2.py
+python test_model.py --checkpoint outputs/outputs_Run12/best_model.pth --train_csv train_split.csv --test_csv test_split.csv --image_root midasmultimodalimagedatasetforaibasedskincancer
 ```
+The outputs will be in: **test_results\outputs_Run12**
 
-
+In order to test another model change the **outputs_Run12** in the command prompt accordingly.
 
 ---
