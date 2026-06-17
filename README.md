@@ -594,7 +594,7 @@ pip install -r requirements.txt
 
 **1. Open the dataset page:**
 
-https://aimi.stanford.edu/datasets/mra-midas-Multimodal-Image-Dataset-for-AI-based-Skin-Cancer?utm_source=chatgpt.com
+https://aimi.stanford.edu/datasets/mra-midas-Multimodal-Image-Dataset-for-AI-based-Skin-Cancer
 
 **2. Click "Download here"**
 
